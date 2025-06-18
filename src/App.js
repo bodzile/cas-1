@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+
+import "./style.css"
+import siteLogo from "./logo.svg"
+
+const name="Bogdan";
+const paragraphColor="green";
+let theme="dark-mode";
+
+function getTime(){
+  let date=new Date();
+  let time=date.getHours();
+  
+  if(time >12){
+    theme="dark-mode";
+  }
+  else{
+    theme="light-mode";
+  }
+}
 
 function App() {
+  getTime();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={theme}>
+      <h1>Pozdrav ja sam {name}</h1>
+      <img alt="random" src={siteLogo}/>
+      <p style={{color: paragraphColor}}>Ovo je moj prvi react app</p>
     </div>
   );
 }

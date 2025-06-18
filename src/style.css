@@ -1,0 +1,18 @@
+h1{
+    color: red;
+}
+
+
+.dark-mode{
+    background-color: rgb(45, 44, 44);
+}
+.dark-mode *{
+    color: white !important;
+}
+
+.light-mode{
+    background-color: rgb(214, 202, 202);
+}
+.light-mode *{
+    color: black !important;
+}
