@@ -13,7 +13,7 @@ const products:ProductInterface={
 };
 
 function Products(props){
-    console.log(props.tax);
+    //console.log(props.tax);
     return (
         <>
             {Object.entries(products).map( ([phone,price]) => {
@@ -24,7 +24,7 @@ function Products(props){
 }
 
 function CalculateTax(price:number, tax:number):number {
-    return price * (1+(tax/100));
+    return Number( (price * (1+(tax/100))).toFixed(2) );
 }
 
 export default Products;
